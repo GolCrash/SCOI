@@ -33,6 +33,9 @@ namespace ImgApp_2_WinForms
             this.bOpen = new System.Windows.Forms.Button();
             this.bSave = new System.Windows.Forms.Button();
             this.bDraw = new System.Windows.Forms.Button();
+            this.binariz = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +45,7 @@ namespace ImgApp_2_WinForms
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 25);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 24);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(908, 620);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -52,7 +55,7 @@ namespace ImgApp_2_WinForms
             // bOpen
             // 
             this.bOpen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bOpen.Location = new System.Drawing.Point(926, 25);
+            this.bOpen.Location = new System.Drawing.Point(940, 24);
             this.bOpen.Name = "bOpen";
             this.bOpen.Size = new System.Drawing.Size(100, 25);
             this.bOpen.TabIndex = 1;
@@ -63,7 +66,7 @@ namespace ImgApp_2_WinForms
             // bSave
             // 
             this.bSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bSave.Location = new System.Drawing.Point(1152, 25);
+            this.bSave.Location = new System.Drawing.Point(1152, 24);
             this.bSave.Name = "bSave";
             this.bSave.Size = new System.Drawing.Size(100, 25);
             this.bSave.TabIndex = 2;
@@ -74,7 +77,7 @@ namespace ImgApp_2_WinForms
             // bDraw
             // 
             this.bDraw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bDraw.Location = new System.Drawing.Point(1037, 25);
+            this.bDraw.Location = new System.Drawing.Point(1046, 24);
             this.bDraw.Name = "bDraw";
             this.bDraw.Size = new System.Drawing.Size(100, 25);
             this.bDraw.TabIndex = 3;
@@ -82,11 +85,44 @@ namespace ImgApp_2_WinForms
             this.bDraw.UseVisualStyleBackColor = true;
             this.bDraw.Click += new System.EventHandler(this.bDraw_Click);
             // 
+            // binariz
+            // 
+            this.binariz.Location = new System.Drawing.Point(940, 55);
+            this.binariz.Name = "binariz";
+            this.binariz.Size = new System.Drawing.Size(100, 23);
+            this.binariz.TabIndex = 4;
+            this.binariz.Text = "Бинаризация";
+            this.binariz.UseVisualStyleBackColor = true;
+            this.binariz.Click += new System.EventHandler(this.binariz_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(1046, 55);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(100, 23);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Фильтрация";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Gaus_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(1152, 55);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(100, 23);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Частотная";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Chastot_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.binariz);
             this.Controls.Add(this.bDraw);
             this.Controls.Add(this.bSave);
             this.Controls.Add(this.bOpen);
@@ -104,6 +140,9 @@ namespace ImgApp_2_WinForms
         private System.Windows.Forms.Button bOpen;
         private System.Windows.Forms.Button bSave;
         private System.Windows.Forms.Button bDraw;
+        private System.Windows.Forms.Button binariz;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
 

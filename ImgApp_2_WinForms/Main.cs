@@ -13,6 +13,9 @@ namespace ImgApp_2_WinForms
     public partial class Main : Form
     {
         private Gradac gradacForm;
+        private Binar BinarForm;
+        private Gaus GausForm;
+        private Chastot ChastotForm;
         private List<Bitmap> images = new List<Bitmap>();
         private List<Bitmap> imageBackUp = new List<Bitmap>();
         private List<int> tags = new List<int>();
@@ -22,7 +25,7 @@ namespace ImgApp_2_WinForms
         private int PictureIndex = 0;
         private int ImageIndex = 0;
         private int NewlayerCount = 0;
-        private int currentYPosition = 0;
+        private int currentYPosition = 15;
 
         private Dictionary<int, float> alphaValues = new Dictionary<int, float>();
 
@@ -853,6 +856,60 @@ namespace ImgApp_2_WinForms
             gradacForm.Show();
         }
         private void GradacClose(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
+        }
+        private void binariz_Click(object sender, EventArgs e)
+        {
+            if (BinarForm == null || BinarForm.IsDisposed)
+            {
+                if (images.Count > 0)
+                    BinarForm = new Binar(images.Last());
+                else
+                    BinarForm = new Binar();
+                BinarForm.FormClosed += BinarClose;
+            }
+
+            this.Hide();
+            BinarForm.Show();
+        }
+        private void BinarClose(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
+        }
+        private void Gaus_Click(object sender, EventArgs e)
+        {
+            if (GausForm == null || GausForm.IsDisposed)
+            {
+                if (images.Count > 0)
+                    GausForm = new Gaus(images.Last());
+                else
+                    GausForm = new Gaus();
+                GausForm.FormClosed += GausClose;
+            }
+
+            this.Hide();
+            GausForm.Show();
+        }
+        private void GausClose(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
+        }
+        private void Chastot_Click(object sender, EventArgs e)
+        {
+            if (ChastotForm == null || ChastotForm.IsDisposed)
+            {
+                if (images.Count > 0)
+                    ChastotForm = new Chastot(images.Last());
+                else
+                    ChastotForm = new Chastot();
+                ChastotForm.FormClosed += ChastotClose;
+            }
+
+            this.Hide();
+            ChastotForm.Show();
+        }
+        private void ChastotClose(object sender, FormClosedEventArgs e)
         {
             this.Show();
         }
